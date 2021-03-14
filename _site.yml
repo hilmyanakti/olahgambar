@@ -1,5 +1,6 @@
 name: "Olah Gambar"
 title: "HILMY BLOG!"
+theme: temaku.css
 description: |
   HILMY BLOG!
 output_dir: "_site"

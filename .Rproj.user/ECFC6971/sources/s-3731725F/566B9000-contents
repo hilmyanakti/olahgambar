@@ -1,15 +1,21 @@
 ---
-title: "HILMY BLOG!"
-description: |
-  Welcome to the website. I hope you enjoy it!
+title: "HILMY BLOG"
+
+image: "foto.jpeg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/durraniu/"
+  - label: Twitter
+    url: "https://twitter.com/umairdurrani87"
+  - label: GitHub
+    url: "https://github.com/durraniu"
+output:
+  postcards::jolla
 site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
 # Learn more about creating websites with Distill at:
 # https://rstudio.github.io/distill/website.html
-
 ```
-
