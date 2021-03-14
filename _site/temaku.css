@@ -15,6 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 
+
 html {
   /*-- Main font sizes --*/
   --title-size:      50px;
@@ -23,7 +24,7 @@ html {
   --aside-size:      12px;
   --fig-cap-size:    13px;
   /*-- Main font colors --*/
-  --title-color:     #000000;
+  --title-color:     #ffffff;
   --header-color:    rgba(0, 0, 0, 0.8);
   --body-color:      rgba(0, 0, 0, 0.8);
   --aside-color:     rgba(0, 0, 0, 0.6);
@@ -32,7 +33,8 @@ html {
   --heading-font:    "Raleway", sans-serif;
   --mono-font:       "Fira Code", monospace;
   --body-font:       "Open Sans", sans-serif;
-  --navbar-font:     "Raleway", sans-serif; /* websites + blogs only */
+  --navbar-font:     "Raleway", sans-serif;  /* websites + blogs only */
+
 }
 
 /*-- ARTICLE METADATA --*/
@@ -40,7 +42,7 @@ d-byline {
   --heading-size:    0.6rem;
   --heading-color:   rgba(0, 0, 0, 0.5);
   --body-size:       0.8rem;
-  --body-color:      rgba(0, 0, 0, 0.8);
+  --body-color:      rgba(255, 255, 255, 255.100);
 }
 
 /*-- ARTICLE TABLE OF CONTENTS --*/
@@ -61,24 +63,24 @@ d-appendix {
 /* These properties only apply to Distill sites and blogs  */
 
 .distill-site-header {
-  --title-size:       18px;
-  --text-color:       rgba(255, 255, 255, 0.8);
+  --title-size:       20px;
+  --text-color:       rgba(0, 0, 0, 100);
   --text-size:        15px;
-  --hover-color:      white;
-  --bkgd-color:       #391509;
+  --hover-color:      black;
+  --bkgd-color:       #fff;
 }
 
 .distill-site-footer {
   --text-color:       rgba(255, 255, 255, 0.8);
   --text-size:        15px;
   --hover-color:      white;
-  --bkgd-color:       #391509;
+  --bkgd-color:       #0F2E3D;
 }
 
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
 
-
 body {
-  background-color: #eadbcb;
+  color: #fff;
+  background-color: #4abdb7;
 }

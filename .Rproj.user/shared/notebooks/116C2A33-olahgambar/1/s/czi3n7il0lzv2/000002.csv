@@ -1,0 +1,24 @@
+"0","setwd(""C:/Users/windows x/Documents/EBimage"")"
+"2","Warning messages:
+"
+"2","1: "
+"2","In readLines(index, encoding = encoding) :"
+"2","
+ "
+"2"," incomplete final line found on 'C:/Users/windows x/Documents/Olah Gambar/index.Rmd'
+"
+"2","2: "
+"2","In readLines(index, encoding = encoding) :"
+"2","
+ "
+"2"," incomplete final line found on 'C:/Users/windows x/Documents/Olah Gambar/index.Rmd'
+"
+"2","The working directory was changed to C:/Users/windows x/Documents/EBimage inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the working directory for notebook chunks."
+"0","library(EBImage)"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"0","Image5 <- Image ^ 2"
+"2","Error in Image^2 : non-numeric argument to binary operator
+"

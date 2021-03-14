@@ -1,0 +1,7 @@
+"0","setwd(""C:/Users/windows x/Documents/EBimage"")"
+"2","The working directory was changed to C:/Users/windows x/Documents/EBimage inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the working directory for notebook chunks."
+"0","library(EBImage)"
+"0","Image3 <- Image * 0.5"
+"0","Image4 <- Image * 2"
+"0","par(mfrow= c(1,2))"
+"0","plot(Image3)"

@@ -1,0 +1,5 @@
+"0",""
+"0","fHigh <- matrix(1, nc = 3, nr = 3)"
+"0","fHigh[2, 2] <- -8"
+"0","Image.fHigh <- filter2(readImage(""foto.jpeg""), fHigh)"
+"0","display(Image.fHigh)"
