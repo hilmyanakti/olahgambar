@@ -104,7 +104,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","theme"]}},"value":[{"type":"character","attributes":{},"value":["Tutorial Olah Gambar Dengan RStudio"]},{"type":"character","attributes":{},"value":["temaku.css"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Tutorial Olah Gambar Dengan RStudio"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2401,15 +2401,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h1 id="mengatur-lokasi-kerja">Mengatur Lokasi Kerja</h1>
-Mengatur lokasi kerja dengan cara membuka folder kerja melalui explorer, dan menyalin lokasi folder Maka akan berupa seperti ini : <br> (C:xGambar) <br> Dan jika kita setwd dengan direktori tersebut maka akan muncul eror seperti ini : <br> (Error: ‘ M’ is an unrecognized escape in character string starting "“D: M”) <br> Oleh sebab itu, kita harus mengganti “" dengan”/"
+<p>Mengatur lokasi kerja dengan cara membuka folder kerja melalui explorer, dan menyalin lokasi folder Maka akan berupa seperti ini :</p>
+<p>(C:xGambar) Dan jika kita setwd dengan direktori tersebut maka akan muncul eror seperti ini : (Error: ‘ M’ is an unrecognized escape in character string starting "“D: M”) Oleh sebab itu, kita harus mengganti “" dengan”/"</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
+<h1 id="instal-package">Instal Package</h1>
+<p>Kita harus menginstall Package agar bisa berjalan lancar, jika sudah bisa dilewati step ini</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span><span class='op'>(</span><span class='st'>"BiocManager"</span>, quietly <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"BiocManager"</span><span class='op'>)</span>
+
+<span class='fu'>BiocManager</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/BiocManager/man/install.html'>install</a></span><span class='op'>(</span><span class='st'>"EBImage"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>package &#39;EBImage&#39; successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+    C:\Users\windows x\AppData\Local\Temp\RtmpS6IwmU\downloaded_packages</code></pre>
+</div>
 <h1 id="memanggil-package">Memanggil Package</h1>
-Kita harus memanggil library EBImage setiap kali kita membutuhkan gambar, dengan code :
+<p>Kita harus memanggil library EBImage setiap kali kita membutuhkan gambar, dengan code :</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
@@ -2417,7 +2433,7 @@ Kita harus memanggil library EBImage setiap kali kita membutuhkan gambar, dengan
 </div>
 </div>
 <h1 id="menginisiasi-gambar-dalam-variabel">Menginisiasi Gambar Dalam Variabel</h1>
-Kita memasukkan gambar kedalam variabel sehingga lebih mudah ketika dipanggil dengan menggunakan code: Dikarenakan gambar yang mau saya panggil bernama foto.jpeg, bisa dirubah sesuai dengan nama dan ekstensi foto masing-masing
+<p>Kita memasukkan gambar kedalam variabel sehingga lebih mudah ketika dipanggil dengan menggunakan code: Dikarenakan gambar yang mau saya panggil bernama foto.jpeg, bisa dirubah sesuai dengan nama dan ekstensi foto masing-masing</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
@@ -2426,7 +2442,7 @@ Kita memasukkan gambar kedalam variabel sehingga lebih mudah ketika dipanggil de
 <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
 </code></pre>
 </div>
-<img src="olahgambar_files/figure-html5/unnamed-chunk-3-1.png" width="624" />
+<img src="olahgambar_files/figure-html5/unnamed-chunk-4-1.png" width="624" />
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
 </code></pre>
@@ -2449,7 +2465,7 @@ imageData(object)[1:5,1:6,1]
 <h1 id="sesi-editing">Sesi Editing</h1>
 <p>Saat ini kita akan mengedit gambar kita sedemikian rupa, dengan menggunakan kode yang ada. Terdapat beberapa pilihan pengaturan gambar:</p>
 <h2 id="pengaturan-kecerahan">Pengaturan Kecerahan</h2>
-Kita dapat mengatur kecerahan gambar sesuai dengan yang kita inginkan, dengan cara menambahkan simbol + atau -
+<p>Kita dapat mengatur kecerahan gambar sesuai dengan yang kita inginkan, dengan cara menambahkan simbol + atau -</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
@@ -2461,10 +2477,10 @@ Kita dapat mengatur kecerahan gambar sesuai dengan yang kita inginkan, dengan ca
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image2</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="olahgambar_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+<p><img src="olahgambar_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
 <h2 id="pengaturan-kontras">Pengaturan Kontras</h2>
-Kita dapat mengatur kontras pada gambar kita menggunakan simbol *, dengan contoh :
+<p>Kita dapat mengatur kontras pada gambar kita menggunakan simbol *, dengan contoh :</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
@@ -2476,10 +2492,10 @@ Kita dapat mengatur kontras pada gambar kita menggunakan simbol *, dengan contoh
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image4</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="olahgambar_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+<p><img src="olahgambar_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
 </div>
 <h2 id="pengaturan-gamma">Pengaturan Gamma</h2>
-Kita dapat mengatur gamma pada foto kita menggunakan simbol ^,dengan contoh :
+<p>Kita dapat mengatur gamma pada foto kita menggunakan simbol ^,dengan contoh :</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
@@ -2491,21 +2507,21 @@ Kita dapat mengatur gamma pada foto kita menggunakan simbol ^,dengan contoh :
 <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image6</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="olahgambar_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+<p><img src="olahgambar_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
 </div>
 <h2 id="pengaturan-pemotongan-gambar">Pengaturan Pemotongan Gambar</h2>
-Kita juga dapat memotong gambar sesuai yang kita inginkan, sebagai berikut :
+<p>Kita juga dapat memotong gambar sesuai yang kita inginkan, sebagai berikut :</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
-<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>[</span><span class='fl'>80</span><span class='op'>:</span><span class='fl'>220</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>20</span>,<span class='op'>]</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>[</span><span class='fl'>80</span><span class='op'>:</span><span class='fl'>220</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>200</span>,<span class='op'>]</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="olahgambar_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
+<p><img src="olahgambar_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
 </div>
 <h1 id="pengaturan-kemiringan">Pengaturan Kemiringan</h1>
-Kita dapat memutar gambar sesuai dengan yang kita inginkan, baik 45 derajat maupun 90 derajat dengan kode:
+<p>Kita dapat memutar gambar sesuai dengan yang kita inginkan, baik 45 derajat maupun 90 derajat dengan kode:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
@@ -2514,10 +2530,10 @@ Kita dapat memutar gambar sesuai dengan yang kita inginkan, baik 45 derajat maup
 <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Imagetr</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="olahgambar_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+<p><img src="olahgambar_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
 </div>
 <h2 id="pengaturan-warna">Pengaturan warna</h2>
-Kita juga dapat mengatur warna kita, misalnya saja kali ini saya contohkan untuk merubah warnanya menjadi grayscale atau abu-abu:
+<p>Kita juga dapat mengatur warna kita, misalnya saja kali ini saya contohkan untuk merubah warnanya menjadi grayscale atau abu-abu:</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
@@ -2526,34 +2542,16 @@ Kita juga dapat mengatur warna kita, misalnya saja kali ini saya contohkan untuk
 <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
 </code></pre>
 </div>
-<img src="olahgambar_files/figure-html5/unnamed-chunk-9-1.png" width="624" />
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
-</code></pre>
-</div>
-<pre><code>Image 
-  colorMode    : Grayscale 
-  storage.mode : double 
-  dim          : 1040 780 3 
-  frames.total : 3 
-  frames.render: 3 
-
-imageData(object)[1:5,1:6,1]
-          [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
-[1,] 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804
-[2,] 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804
-[3,] 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020
-[4,] 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020
-[5,] 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020</code></pre>
+<img src="olahgambar_files/figure-html5/unnamed-chunk-10-1.png" width="624" />
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/Image.html'>colorMode</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>Color</span>
 <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="olahgambar_files/figure-html5/unnamed-chunk-9-2.png" width="624" /></p>
+<p><img src="olahgambar_files/figure-html5/unnamed-chunk-10-2.png" width="624" /></p>
 </div>
 <h2 id="pengaturan-filter">Pengaturan Filter</h2>
-Mengatur filter merupakan tahap yang paling sulit untuk dijalankan, namun kita dapat memberi efek pada foto kita seperti efek blur dengan contoh :
+<p>Mengatur filter merupakan tahap yang paling sulit untuk dijalankan, namun kita dapat memberi efek pada foto kita seperti efek blur dengan contoh :</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/Olah Gambar"</span><span class='op'>)</span>
@@ -2565,7 +2563,7 @@ Mengatur filter merupakan tahap yang paling sulit untuk dijalankan, namun kita d
 <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image.fLow</span><span class='op'>)</span>
 </code></pre>
 </div>
-<img src="olahgambar_files/figure-html5/unnamed-chunk-10-1.png" width="624" />
+<img src="olahgambar_files/figure-html5/unnamed-chunk-11-1.png" width="624" />
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>fHigh</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span>, nc <span class='op'>=</span> <span class='fl'>3</span>, nr <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
 <span class='va'>fHigh</span><span class='op'>[</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>8</span>
@@ -2573,7 +2571,7 @@ Mengatur filter merupakan tahap yang paling sulit untuk dijalankan, namun kita d
 <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image.fHigh</span><span class='op'>)</span>
 </code></pre>
 </div>
-<p><img src="olahgambar_files/figure-html5/unnamed-chunk-10-2.png" width="624" /></p>
+<p><img src="olahgambar_files/figure-html5/unnamed-chunk-11-2.png" width="624" /></p>
 </div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
