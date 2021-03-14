@@ -3,7 +3,7 @@
     "path": "~/Olah Gambar/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1370992670",
     "contents": "",
     "dirty": false,
     "created": 1615726541849.0,
@@ -16,11 +16,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1615741687,
+    "lastKnownWriteTime": 1615744253,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1615741687245,
+    "last_content_update": 1615744253644,
     "read_only": false,
     "read_only_alternatives": []
 }
