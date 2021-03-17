@@ -5,7 +5,7 @@ links:
   - label: Facebook
     url: "https://www.facebook.com/hilmy888"
   - label: Materi
-    url: "https://compassionate-chandrasekhar-8a714d.netlify.app/olahgambar.html"
+    url: "https://hilmyanakti.github.io/olahgambar/olahgambar.html"
   - label: Instagram
     url: "https://instagram.com/hilmyghilmany"
 output:
