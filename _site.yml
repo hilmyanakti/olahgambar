@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: "Olah Gambar"
 title: "HILMY BLOG!"
 theme: temaku.css
@@ -11,3 +12,18 @@ navbar:
     - text: "Tentang"
       href: about.html
 output: distill::distill_article
+=======
+name: "Olah Gambar"
+title: "HILMY BLOG!"
+theme: temaku.css
+description: |
+  HILMY BLOG!
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Materi"
+      href: olahgambar.html
+    - text: "Tentang"
+      href: about.html
+output: distill::distill_article
+>>>>>>> b638ab0de553458a29ea49fd70eb65143f9b8efe

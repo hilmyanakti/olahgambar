@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "HILMY BLOG"
 image: "foto1.jpeg"
@@ -14,4 +15,22 @@ site: distill::distill_website
 ---
 Tekan Tombol Materi Untuk Mengakses
 
+=======
+---
+title: "HILMY BLOG"
+image: "foto1.jpeg"
+links:
+  - label: Facebook
+    url: "https://www.facebook.com/hilmy888"
+  - label: Materi
+    url: "https://hilmyanakti.github.io/olahgambar/olahgambar.html"
+  - label: Instagram
+    url: "https://instagram.com/hilmyghilmany"
+output:
+  postcards::jolla
+site: distill::distill_website
+---
+Tekan Tombol Materi Untuk Mengakses
+
+>>>>>>> b638ab0de553458a29ea49fd70eb65143f9b8efe
 == Tutorial Olah Gambar Di RStudio ==
