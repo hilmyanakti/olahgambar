@@ -85,26 +85,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>HILMY BLOG: Tentang Penulis</title>
+  <title>HILMY BLOG: Tutorial Olah Gambar Dengan RStudio</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="HILMY BLOG: Tentang Penulis"/>
+  <meta property="og:title" content="HILMY BLOG: Tutorial Olah Gambar Dengan RStudio"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="HILMY BLOG"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="HILMY BLOG: Tentang Penulis"/>
+  <meta property="twitter:title" content="HILMY BLOG: Tutorial Olah Gambar Dengan RStudio"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Tentang Penulis"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title"]}},"value":[{"type":"character","attributes":{},"value":["Tutorial Olah Gambar Dengan RStudio"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2370,7 +2370,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Tentang Penulis","authors":[]}
+{"title":"Tutorial Olah Gambar Dengan RStudio","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2392,7 +2392,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Tentang Penulis</h1>
+<h1>Tutorial Olah Gambar Dengan RStudio</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2400,17 +2400,179 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<h1 id="penulis">Penulis</h1>
-<p><img src="https://pbs.twimg.com/profile_images/1327996864025640965/KmxFFxk2_400x400.jpg" /></p>
-<p>Nama : Muhammad Hilmy Ghilmany</p>
-<p>NIM : 20060510020</p>
-<p>PRAKTIKUM ELEKTRONIKA DIGITAL B</p>
-<h1 id="atas-bimbingan">Atas Bimbingan</h1>
-<p><img src="https://scontent.fsub8-1.fna.fbcdn.net/v/t1.0-0/s552x414/101692139_10216992420151979_6304736812904231421_o.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=09cbfe&amp;_nc_eui2=AeEl0zl8yTABcdE0jC0xnC27_J9br-SWDTP8n1uv5JYNM6TDDhEPZasyDeuMv9_H4OHoO5zyN2FjORicZjVRxpGT&amp;_nc_ohc=Eb_yWEOuxxYAX9KCgUt&amp;_nc_ht=scontent.fsub8-1.fna&amp;tp=7&amp;oh=6d742da6b350354041a604fa9b18cd72&amp;oe=60830C46" /> Prof. Dr. Suhartono, M.Kom</p>
-<p>Dosen Linier Algebra</p>
-<p>Teknik Informatika</p>
-<p>UIN Malang</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h1 id="mengatur-lokasi-kerja">Mengatur Lokasi Kerja</h1>
+<p>Mengatur lokasi kerja dengan cara membuka folder kerja melalui explorer, dan menyalin lokasi folder, namun kita harus mengganti “" dengan”/" sehingga akan menghasilkan lokasi kerja sebagai berikut:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h1 id="instal-package">Instal Package</h1>
+<p>Kita harus menginstall Package agar bisa berjalan lancar, jika sudah bisa dilewati step ini</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'>if</span> <span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span><span class='op'>(</span><span class='st'>"BiocManager"</span>, quietly <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"BiocManager"</span><span class='op'>)</span>
+
+<span class='fu'>BiocManager</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/BiocManager/man/install.html'>install</a></span><span class='op'>(</span><span class='st'>"EBImage"</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>package &#39;EBImage&#39; successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+    C:\Users\windows x\AppData\Local\Temp\RtmpIR1PDV\downloaded_packages</code></pre>
+</div>
+<h1 id="memanggil-package">Memanggil Package</h1>
+<p>Kita harus memanggil library EBImage setiap kali kita membutuhkan gambar, dengan code :</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h1 id="menginisiasi-gambar-dalam-variabel">Menginisiasi Gambar Dalam Variabel</h1>
+<p>Kita memasukkan gambar kedalam variabel sehingga lebih mudah ketika dipanggil dengan menggunakan code: Dikarenakan gambar yang mau saya panggil bernama foto.jpeg, bisa dirubah sesuai dengan nama dan ekstensi foto masing-masing</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+<span class='va'>Image</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/io.html'>readImage</a></span><span class='op'>(</span><span class='st'>'foto.jpeg'</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="materi_files/figure-html5/unnamed-chunk-4-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Image 
+  colorMode    : Color 
+  storage.mode : double 
+  dim          : 1040 780 3 
+  frames.total : 3 
+  frames.render: 1 
+
+imageData(object)[1:5,1:6,1]
+          [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
+[1,] 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804
+[2,] 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804 0.8509804
+[3,] 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020
+[4,] 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020
+[5,] 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020 0.8549020</code></pre>
+</div>
+<h1 id="sesi-editing">Sesi Editing</h1>
+<p>Saat ini kita akan mengedit gambar kita sedemikian rupa, dengan menggunakan kode yang ada. Terdapat beberapa pilihan pengaturan gambar:</p>
+<h2 id="pengaturan-kecerahan">Pengaturan Kecerahan</h2>
+<p>Kita dapat mengatur kecerahan gambar sesuai dengan yang kita inginkan, dengan cara menambahkan simbol + atau -</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+<span class='va'>Image1</span> <span class='op'>&lt;-</span> <span class='va'>Image</span> <span class='op'>+</span> <span class='fl'>0.2</span>
+<span class='va'>Image2</span> <span class='op'>&lt;-</span> <span class='va'>Image</span> <span class='op'>-</span> <span class='fl'>0.2</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image2</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="materi_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
+</div>
+<h2 id="pengaturan-kontras">Pengaturan Kontras</h2>
+<p>Kita dapat mengatur kontras pada gambar kita menggunakan simbol *, dengan contoh :</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+<span class='va'>Image3</span> <span class='op'>&lt;-</span> <span class='va'>Image</span> <span class='op'>*</span> <span class='fl'>0.5</span>
+<span class='va'>Image4</span> <span class='op'>&lt;-</span> <span class='va'>Image</span> <span class='op'>*</span> <span class='fl'>2</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image3</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image4</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="materi_files/figure-html5/unnamed-chunk-6-1.png" width="624" /></p>
+</div>
+<h2 id="pengaturan-gamma">Pengaturan Gamma</h2>
+<p>Kita dapat mengatur gamma pada foto kita menggunakan simbol ^,dengan contoh :</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+<span class='va'>Image5</span> <span class='op'>&lt;-</span> <span class='va'>Image</span> <span class='op'>^</span> <span class='fl'>2</span>
+<span class='va'>Image6</span> <span class='op'>&lt;-</span> <span class='va'>Image</span> <span class='op'>^</span> <span class='fl'>0.7</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image5</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>Image6</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="materi_files/figure-html5/unnamed-chunk-7-1.png" width="624" /></p>
+</div>
+<h2 id="pengaturan-pemotongan-gambar">Pengaturan Pemotongan Gambar</h2>
+<p>Kita juga dapat memotong gambar sesuai yang kita inginkan, sebagai berikut :</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>[</span><span class='fl'>80</span><span class='op'>:</span><span class='fl'>220</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>200</span>,<span class='op'>]</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="materi_files/figure-html5/unnamed-chunk-8-1.png" width="624" /></p>
+</div>
+<h1 id="pengaturan-kemiringan">Pengaturan Kemiringan</h1>
+<p>Kita dapat memutar gambar sesuai dengan yang kita inginkan, baik 45 derajat maupun 90 derajat dengan kode:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+<span class='va'>Imagetr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/spatial.html'>translate</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/spatial.html'>rotate</a></span><span class='op'>(</span><span class='va'>Image</span>, <span class='fl'>45</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>50</span>, <span class='fl'>0</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Imagetr</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="materi_files/figure-html5/unnamed-chunk-9-1.png" width="624" /></p>
+</div>
+<h2 id="pengaturan-warna">Pengaturan warna</h2>
+<p>Kita juga dapat mengatur warna kita, misalnya saja kali ini saya contohkan untuk merubah warnanya menjadi grayscale atau abu-abu:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/Image.html'>colorMode</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>Grayscale</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="materi_files/figure-html5/unnamed-chunk-10-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/Image.html'>colorMode</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>Color</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="materi_files/figure-html5/unnamed-chunk-10-2.png" width="624" /></p>
+</div>
+<h2 id="pengaturan-filter">Pengaturan Filter</h2>
+<p>Mengatur filter merupakan tahap yang paling sulit untuk dijalankan, namun kita dapat memberi efek pada foto kita seperti efek blur dengan contoh :</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>setwd</a></span><span class='op'>(</span><span class='st'>"C:/Users/windows x/Documents/EBImage2"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/aoles/EBImage'>EBImage</a></span><span class='op'>)</span>
+
+<span class='va'>fLow</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/morphology.html'>makeBrush</a></span><span class='op'>(</span><span class='fl'>21</span>, shape <span class='op'>=</span> <span class='st'>'disc'</span>, step <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span>
+<span class='va'>fLow</span> <span class='op'>&lt;-</span> <span class='va'>fLow</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>fLow</span><span class='op'>)</span>
+<span class='va'>Image.fLow</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/filter2.html'>filter2</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/io.html'>readImage</a></span><span class='op'>(</span><span class='st'>"foto.jpeg"</span><span class='op'>)</span>, <span class='va'>fLow</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image.fLow</span><span class='op'>)</span>
+</code></pre>
+</div>
+<img src="materi_files/figure-html5/unnamed-chunk-11-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>fHigh</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span>, nc <span class='op'>=</span> <span class='fl'>3</span>, nr <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
+<span class='va'>fHigh</span><span class='op'>[</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>8</span>
+<span class='va'>Image.fHigh</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/filter2.html'>filter2</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/io.html'>readImage</a></span><span class='op'>(</span><span class='st'>"foto.jpeg"</span><span class='op'>)</span>, <span class='va'>fHigh</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/EBImage/man/display.html'>display</a></span><span class='op'>(</span><span class='va'>Image.fHigh</span><span class='op'>)</span>
+</code></pre>
+</div>
+<p><img src="materi_files/figure-html5/unnamed-chunk-11-2.png" width="624" /></p>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
